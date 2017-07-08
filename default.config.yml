@@ -1,0 +1,90 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_sudoers: yes
+configure_terminal: yes
+configure_macos: yes
+
+dotfiles_repo: https://github.com/bernied/dotfiles.git
+dotfiles_repo_accept_hostkey: yes
+dotfiles_repo_local_destination: ~/Projects/dotfiles
+dotfiles_files:
+  - .bash_profile
+  - .gitconfig
+  - .gitignore
+  - .inputrc
+  - .macos
+  - .vimrc
+  - .vimrc_secure
+
+vars:
+  - java_version: 8
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - ack
+  - autoconf
+  - bash-completion
+  - curl
+  - doxygen
+  - gettext
+  - git
+  - michaeldfallen/formula/git-radar
+  - gradle
+  - gpg
+  # - hub
+  - httpie
+  - iperf
+  - jq
+  # - libevent
+  - maven
+  - md5sha1sum
+  - nmap
+  # - npm
+  # - nvm
+  - openssl
+  - pv
+  - readline
+  - rsync
+  - sloccount
+  - ssh-copy-id
+  - sqlite
+  - wget
+  - wrk
+  - vim
+
+homebrew_taps:
+  - homebrew/core
+  - caskroom/cask
+  - homebrew/binary
+  - homebrew/dupes
+  - homebrew/versions
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - eclipse-jee
+  - firefox
+  - freemind
+  - google-chrome
+  - iterm2
+  - licecap
+  - macvim
+  - nvalt
+  - sequel-pro
+  - slack
+  - sublime-text
+  - transmit
+  - vagrant
+  - virtualbox
+  - wireshark
+  # licensed software
+  - intellij-idea
+  - omnifocus
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+#  - { id: 497799835, name: "Xcode" }
+mas_email: "{{ user_mas_email }}"
+mas_password: "{{ user_mas_password }}"
+
